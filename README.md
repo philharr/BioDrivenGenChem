@@ -13,12 +13,12 @@ The source CSV is available here:
 
 [View/download the CSV](data/BioDrivenGenChem_Table1.csv)
 
-## Notes
+### Notes
 
  - The model names enclosed in square brackets are not the official names, but those that we used in our review paper for convenience.
  - SE(3)-eq. stands for SE(3)-equivariance. For 3D molecular models, E(3)-equivariance enforces rotation, translation and reflection symmetries, whereas SE(3)-equivariance does not enforce reflection symmetry, thus enabling enantiomer compounds to be differentiated. 
 
-## Acronyms used in the table
+### Acronyms used in the table
 
 | Acronym             | Meaning                                                 |
 | ------------------- | ------------------------------------------------------- |
