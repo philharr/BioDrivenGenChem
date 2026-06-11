@@ -1,0 +1,86 @@
+Biological data,Model Name,Author,Paper,Year,Molecule input,Biological input,3D,SE(3)-eq.,Main architecture,Model components,Optimisation,Additional conditioning,Experimental validation
+Bioassays,pqsar2cpd,Pikusa et al.,https://www.biorxiv.org/content/10.1101/2021.12.10.472084v1,2021,Graph + SMILES,EC50,No,No,VAE,"JT-VAE, GAN, QSAR",,,Yes
+Bioassays,JAEGER,Godinez et al.,https://www.nature.com/articles/s42256-022-00448-w,2022,Graph,pIC50,No,No,VAE ,"JT-VAE, residual neural network",,Activity thresholds,Yes
+Bioassays,,Horne et al.,https://pubs.acs.org/doi/10.1021/acs.jctc.2c01303,2023,Graph + SMILES,Aggregation inhibition,No,No,RNN,"LSTM, GNN, QSAR",RL,,No
+Bioassays,POLYGON,Munson et al.,https://www.nature.com/articles/s41467-024-47120-y,2024,SMILES,pIC50,No,No,VAE,pIC50 predictor,RL,"Ligand efficiency (two targets), QED, SA",Yes
+Bioassays,,Zavadskaya et al.,https://link.springer.com/article/10.1186/s13321-025-00998-2,2025,Graph,pIC50,No,No,GCN,"QSAR, fragment-based",RL,"pIC50, docking score",No
+Protein structure,,Aumentado-Armstrong,https://arxiv.org/abs/1809.02032,2018,SMILES,Graph,No,No,VAE,"JT-VAE, GNN",Latent space gradient descent,"LogP, QED,SA, toxicity",No
+Protein structure,LiGANN,Skalic et al.,https://pubs.acs.org/doi/10.1021/acs.molpharmaceut.9b00634,2019,3D geometry,PLC,Yes,No,GAN,"U-Net, CNN-LSTM",,,No
+Protein structure,CogMol,Chenthamarakshan et al.,https://proceedings.neurips.cc/paper_files/paper/2020/hash/2d16ad1968844a4300e9a490588ff9f8-Abstract.html,2020,SMILES,Protein sequence,No,No,VAE,Binding affinity regressor,Conditional rejection sampling,"QED, logP, SA, pIC50, selectivity",No
+Protein structure,DeepLigBuilder,Li et al.,https://pubs.rsc.org/en/content/articlelanding/2021/sc/d1sc04444c,2021,Graph,3D pocket,Yes,No,GCN,,MCTS,Docking score,No
+Protein structure,PaccMannRL,Born et al.,https://iopscience.iop.org/article/10.1088/2632-2153/abe808,2021,SELFIES,Protein embedding,No,No,VAE,Critic for IC50,RL,"Docking score, toxicity",No
+Protein structure,Sample-and-Dock,Xu et al.,https://pubs.acs.org/doi/10.1021/acs.jcim.1c00746,2021,Graph,Crystal structure,Yes,No,VAE,JT-VAE,Iterative search based on docking score,Docking score,No
+Protein structure,SBMolGen,Ma et al.,https://pubs.acs.org/doi/10.1021/acs.jcim.1c00679,2021,SMILES,Crystal structure,Yes,No,RNN,GRU,MCTS,Docking score,No
+Protein structure,,Grechishnikova,https://www.nature.com/articles/s41598-020-79682-4,2021,SMILES,Protein sequence,No,No,Transformer,,,,No
+Protein structure,,Xu et al.,https://pubs.acs.org/doi/10.1021/acs.jcim.0c01494,2021,SMILES,Pocket descriptor,No,No,RNN,LSTM,,,No
+Protein structure,[AR3D],Luo et al.,https://arxiv.org/abs/2203.10446,2022,Atomic density grid,PLC,Yes,No,GNN,,MCMC,,No
+Protein structure,AlphaDrug,Qian et al.,https://academic.oup.com/pnasnexus/article/1/4/pgac227/6751929,2022,SMILES,Protein sequence,No,No,Transformer,,MCTS,Docking score,No
+Protein structure,GraphBP,Liu et al.,https://proceedings.mlr.press/v162/liu22m.html,2022,Graph,PLC,Yes,Yes,Flow,GNN,,,No
+Protein structure,LiGAN,Ragoza et al.,https://pubs.rsc.org/en/content/articlelanding/2022/sc/d1sc05976a,2022,Atomic density grid,PLC,Yes,No,VAE,CNN,,,No
+Protein structure,Pocket2Mol,Peng et al,https://proceedings.mlr.press/v162/peng22b/peng22b.pdf,2022,PLC,PLC,Yes,No,GNN,Attention modules,,,No
+Protein structure,RELATION,Wang et al.,https://pubs.acs.org/doi/10.1021/acs.jmedchem.2c00732,2022,Grid,PLC,Yes,No,AAE,"CNN, LSTM",Bayesian optimisation,Docking score,No
+Protein structure,,Uludoğan et al.,https://academic.oup.com/bioinformatics/article/38/Supplement_2/ii155/6702010,2022,SMILES,Protein sequence,No,No,Transformer,,Beam search,,No
+Protein structure,,Wang et al.,https://www.nature.com/articles/s41598-022-19363-6,2022,Electron density map,Electron density map,Yes,No,"GAN, VAE","VQ-VAE, CNN",,,No
+Protein structure,,Zhang & Chen,https://pubs.acs.org/doi/10.1021/acs.jcim.2c00177,2022,SMILES,Ligand-protein interaction fingerprint,No,No,RNN,LSTM,,"Molecular properties, ECFP fingerprints, docking score",No
+Protein structure,CogMol exp. validation,Chenthamarakshan et al.,https://www.science.org/doi/10.1126/sciadv.adg7865,2023,SMILES,Protein sequence,No,No,VAE,Binding affinity regressor,Conditional rejection sampling,"QED, logP, SA, pIC50, selectivity",Yes
+Protein structure,CProMG,Li et al.,https://academic.oup.com/bioinformatics/article/39/Supplement_1/i326/7210458,2023,SMILES,PLC,No,No,Transformer,GNN,,"logP, SA, QED, TPSA, docking score",No
+Protein structure,DecompDiff,Guan et al.,https://proceedings.mlr.press/v202/guan23a.html,2023,Graph,PLC,Yes,Yes,Diffusion,GNN,,Drift terms to avoid clashes,No
+Protein structure,DrugGPS,Zhang & Liu,https://arxiv.org/abs/2305.13997v1,2023,Graph,PLC,Yes,No,Transformer,GNN,,Binding analysis tool,No
+Protein structure,FLAG,Zhang et al.,https://openreview.net/forum?id=Rq13idF0F73,2023,Graph,3D pocket,Yes,No,GNN,,,,No
+Protein structure,PETrans,Wang et al.,https://www.mdpi.com/1422-0067/24/2/1146,2023,SMILES,Protein sequence,No,No,Transformer,,Transfer learning,,No
+Protein structure,PGMG,Zhu et al.,https://www.nature.com/articles/s41467-023-41454-9,2023,SMILES,Pharmacophore graph,No,No,Transformer,GCN,,,No
+Protein structure,ResGen,Zhang et al.,https://www.nature.com/articles/s42256-023-00712-7,2023,Graph,PLC,Yes,Yes,GNN,"GVP, VN",,,No
+Protein structure,TargetDiff,Guan et al.,https://openreview.net/forum?id=kJqXEPXMsE0,2023,Graph,PLC,Yes,Yes,Diffusion,GNN,,,No
+Protein structure,AIxFuse,Chen et al.,https://pubs.rsc.org/en/content/articlelanding/2024/sc/d4sc00094c,2024,Graph,Pharmacophore graph,Yes,No,GNN,,"RL, MCTS, AL","Docking score (2 targets), QED, SA",No
+Protein structure,DecompOpt,Zhou et al.,https://arxiv.org/abs/2403.13829,2024,Graph,PLC,Yes,Yes,Diffusion,GNN,Evolutionary algorithm,"QED, SA, Vina Min",No
+Protein structure,DeepICL,Zhung et al.,https://www.nature.com/articles/s41467-024-47011-2,2024,Graph,PLC,Yes,No,VAE,,,Interaction information,No
+Protein structure,DiffDTM,Huang et al.,https://ieeexplore.ieee.org/document/10497533,2024,Graph,2 protein sequences,No,No,Diffusion,"Transformer, GNN",,,No
+Protein structure,DiffSBDD,Schneuing et al.,https://www.nature.com/articles/s43588-024-00737-x,2024,Graph,PLC,Yes,Yes,Diffusion,GNN,Evolutionary algorithm,"SA, QED, docking score",No
+Protein structure,DRAGONFLY,Atz et al.,https://www.nature.com/articles/s41467-024-47613-w,2024,Graph,Graph,No,No,Transformer,"GNN, LSTM",,Physiochemical properties,Yes
+Protein structure,DualDiff,Zhou et al.,https://arxiv.org/abs/2410.20688,2024,Graph,Aligned dual protein pocket,Yes,Yes,Diffusion,GNN,,,No
+Protein structure,IPDiff,Huang et al.,https://openreview.net/forum?id=qH9nrMNTIW,2024,Graph,PLC,Yes,Yes,Diffusion,GNN,,Docking score (indirectly via a prior model),No
+Protein structure,KGDiff,Qian et al.,https://academic.oup.com/bib/article/25/1/bbad435/7457350,2024,Graph,PLC,Yes,Yes,Diffusion,GNN,,Docking score (jointly predicted),No
+Protein structure,Lingo3DMol,Feng et al.,https://www.nature.com/articles/s42256-023-00775-6,2024,FSMILES,PLC,Yes,No,Transformer,,,NCIs,No
+Protein structure,MolCRAFT,Qu et al.,https://arxiv.org/abs/2404.12141,2024,Graph,PLC,Yes,Yes,Bayesian flow,GNN,,,No
+Protein structure,PILOT,Cremer et al.,https://pubs.rsc.org/en/content/articlelanding/2024/sc/d4sc03523b,2024,Graph,PLC,Yes,Yes,Diffusion,GNN,Importance sampling,"SA, docking score, pIC50",No
+Protein structure,PMDM,Huang et al.,https://www.nature.com/articles/s41467-024-46569-1,2024,Graph,PLC,Yes,Yes,Diffusion,GNN,,,Yes
+Protein structure,PocketFlow,Jiang et al.,https://www.nature.com/articles/s42256-024-00808-8,2024,Graph,PLC,Yes,Yes,Flow,"GVP, VN",,"Alert structure, valency, bond length",Yes
+Protein structure,TAGMol,Dorna et al.,https://arxiv.org/abs/2406.01650v1,2024,Graph,PLC,Yes,Yes,Diffusion,GNN,Gradient-based property guidance,"SA, QED, docking score",No
+Protein structure,TamGen,Wu et al.,https://www.nature.com/articles/s41467-024-53632-4,2024,SMILES,Protein sequence,No,No,Transformer,VAE,,,Yes
+Protein structure,TargetVAE,Ngo et al.,https://iopscience.iop.org/article/10.1088/2632-2153/ad3ee4,2024,SELFIES,3D protein structure,No,No,VAE,"Transformer, GNN",,,No
+Protein structure,VoxBind,Pinheiro et al. ,https://arxiv.org/abs/2405.03961,2024,Voxelized grid,Voxelized PLC,Yes,Yes,U-Net,,MCMC,,No
+Protein structure,,Zheng et al.,https://link.springer.com/content/pdf/10.1007/978-981-99-8549-4_26.pdf,2024,SMILES,Protein sequence,No,No,Transformer,BERT,Transfer learning,,No
+Protein structure,3DSMILES-GPT,Wang et al.,https://pubs.rsc.org/en/content/articlelanding/2025/sc/d4sc06864e,2025,SMILES,Atomic coordinates,No,No,Transformer,,RL,"QED, SA ",No
+Protein structure,BInD,Lee et al.,https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/advs.202502702,2025,Graph,PLC,Yes,Yes,Diffusion,GNN,,Docking score,No
+Protein structure,DiffBP,Lin et al.,https://pubs.rsc.org/en/content/articlelanding/2025/sc/d4sc05894a,2025,Graph,PLC,Yes,Yes,Diffusion,GNN,,,No
+Protein structure,DiffPharm,Li et al.,https://chemrxiv.org/doi/full/10.26434/chemrxiv-2025-314kz,2025,Graph,Pharmacophore graph,Yes,Yes,Diffusion,"Transformer, GNN",,,No
+Protein structure,DrugFlow,Schneuing et al.,https://arxiv.org/abs/2508.17815,2025,Graph,PLC,Yes,Yes,Flow,GNN,Direct preference optimisation,"SA, QED, docking score, structural alerts",No
+Protein structure,ED2Mol,Li et al.,https://www.nature.com/articles/s42256-025-01095-7,2025,Electron density map,Electron density map,Yes,Yes,VAE,"Convolutional VAE, GNN",,,Yes
+Protein structure,FLOWR,Cremer et al.,https://arxiv.org/abs/2504.10564,2025,Graph,PLC,Yes,Yes,Flow,GNN,,Protein-ligand interaction features,No
+Protein structure,MEVO,He et al.,https://arxiv.org/abs/2507.20130,2025,Graph,Pocket and pharmacophore graphs,Yes,No,Diffusion,"Transformer, VQ-VAE",Evolutionary algorithm,Energy and interaction terms,No
+Protein structure,MolJO,Qiu et al.,https://arxiv.org/abs/2411.13280,2025,Graph,PLC,Yes,Yes,Bayesian flow,GNN,Gradient-based property guidance,"SA, QED, docking score",No
+Protein structure,PhoreGen,Peng et al.,https://www.nature.com/articles/s43588-025-00850-5,2025,Graph,Pharmacophore,Yes,Yes,Diffusion,"Transformer, GNN",,,Yes
+Transcriptomics,[GxGAN],Méndez-Lucio et al.,https://www.nature.com/articles/s41467-019-13807-w,2020,SMILES,GEP,No,No,GAN,,,,No
+Transcriptomics,BiAAE,Shayakhmetov et al.,https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2020.00269/full,2020,SMILES,GEP,No,No,GAN,,,Dose,No
+Transcriptomics,PaccMannRL,Born et al.,https://www.cell.com/iscience/fulltext/S2589-0042(21)00237-6,2021,SMILES,GEP,No,No,VAE,,RL,"IC50, Tox21 & SIDER",No
+Transcriptomics,TRIOMPHE,Kaitoh and Yamanishi,https://pubs.acs.org/doi/10.1021/acs.jcim.1c00967,2021,SELFIES,GEP,No,No,VAE,,Particle swarm optimisation,pIC50,No
+Transcriptomics,[GxLSTM-VAE],Pereira et al.,https://academic.oup.com/bib/article/23/4/bbac270/6628785,2022,SMILES,GEP,No,No,VAE,,RL,"Reverse Gene Expression Score, USP7 expression level",No
+Transcriptomics,FAME,Pham et al.,https://epubs.siam.org/doi/abs/10.1137/1.9781611977172.81,2022,Graph,GEP,No,No,VAE,,,,No
+Transcriptomics,BiCEV,Pravalphruekul et al.,https://pubs.acs.org/doi/10.1021/acs.jcim.3c00355,2023,SMILES,GEP,No,No,VAE,,,,No
+Transcriptomics,DRAGONET,Yamanaka et al.,https://onlinelibrary.wiley.com/doi/full/10.1002/minf.202300064,2023,SMILES,None,No,No,Transformer,,Latent space search,,No
+Transcriptomics,Gex2SGen,Das et al.,https://pubs.acs.org/doi/10.1021/acs.jcim.2c01301,2023,SMILES,GEP,No,No,VAE,,,,No
+Transcriptomics,GexMolGen,Cheng et al.,https://academic.oup.com/bib/article/25/6/bbae525/7845937,2024,Graph,GEP,No,No,VAE,"Transformer, contrastive learning",,,No
+Transcriptomics,GLDM,Wang et al.,https://academic.oup.com/bib/article/25/3/bbae142/7640735,2024,Graph,GEP,No,No,Diffusion,,,,No
+Transcriptomics,GxRNN,Matsukiyo et al.,https://pubs.acs.org/doi/10.1021/acs.jcim.4c00531,2024,SMILES,GEP,No,No,RNN,LSTM,,,No
+Transcriptomics,GxVAEs,Li & Yamanishi,https://ojs.aaai.org/index.php/AAAI/article/view/29248,2024,SMILES,GEP,No,No,VAE,,,,No
+Transcriptomics,TransGEM,Liu et al.,https://academic.oup.com/bioinformatics/article/40/5/btae189/7649318,2024,SELFIES,GEP,No,No,Transformer,,,,No
+Transcriptomics,TRIOMPHE-BOA,Matsukiyo et al.,https://pubs.acs.org/doi/10.1021/acs.jcim.3c00824,2024,SMILES,None,No,No,Transformer,,Bayesian optimisation,,No
+Transcriptomics,G2D-Diff,Kim et al.,https://www.nature.com/articles/s41467-025-60763-9,2025,SMILES,Genetic alterations,No,No,Diffusion,"VAE, transformer, contrastive learning",,Drug response data,No
+Transcriptomics,MolGene-E,Ohlan et al.,https://www.biorxiv.org/content/10.1101/2025.02.19.638723v1,2025,SELFIES,GEP,No,No,VAE,Contrastive learning,,,No
+Transcriptomics,PhenoMoler,Song & Liu,https://arxiv.org/abs/2509.21424,2025,SELFIES,GEP,No,No,Transformer,CNN,,,No
+Transcriptomics,GPS platform,Xing et al.,https://www.cell.com/cell/fulltext/S0092-8674(26)00223-0,2026,Graph,GEP,No,No,Transformer,,MCTS,"GEP, QED, SA, solubility",Yes
+Cell morphology,[CPGAN],Zapata et al.,https://pubs.rsc.org/en/content/articlelanding/2023/dd/d2dd00081d,2022,SELFIES,CellProfiler features,No,No,GAN,VAE,,,No
+Cell morphology,GFlowNet,Lu et al.,https://arxiv.org/abs/2408.05196v1,2024,Graph,CellProfiler features,No,No,Flow,Contrastive learning,,,No
+Cell morphology,[CPGAN] exp. val.,Fabjan et al.,https://www.biorxiv.org/content/10.1101/2025.09.13.676062v1,2025,SELFIES,CellProfiler features,No,No,GAN,VAE,,,Yes
+Cell morphology,MGMG,Tang et al.,https://www.biorxiv.org/content/10.1101/2025.07.11.664424v1,2025,SELFIES,CellProfiler features,No,No,Transformer,Contrastive learning,,,No
+Cell morphology,Pert2Mol,Wang et al.,https://www.biorxiv.org/content/10.64898/2026.02.02.703193v1,2026,SMILES,GEP + cell images,No,No,Flow,"BERT, ResNet",,,No
