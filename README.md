@@ -7,7 +7,7 @@ By Philip John Harrison and Rocío Mercado.
 
 View the searchable/filterable table here:
 
-👉 **[Open interactive Table 1](https://philharr.github.io/BioDrivenGenChem/)**
+👉 **[Open interactive Table](https://philharr.github.io/BioDrivenGenChem/)**
 
 The source CSV is available here:
 
